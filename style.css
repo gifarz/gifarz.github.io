@@ -1,0 +1,160 @@
+:root{
+    --primary-color: #e50914;
+    --dark-color: #141414;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,h2,h3,h4 {
+    color : #fff;
+}
+
+a {
+    color : #fff;
+}
+
+.showcase {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    background: url('../img/background.jpg') no-repeat center center/cover;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0, 0.45);
+    box-shadow: inset 50px 50px 200px #000, inset -50px -50px 200px #000;
+}
+
+.showcase-top {
+    position: relative;
+    height: 90px;
+    z-index: 2;
+}
+
+.showcase-top img {
+    width: 230px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding-top: 200px;
+}
+
+.showcase-top a {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 12rem;
+    z-index: 2;
+}
+
+.showcase-content h1 {
+    font-size: 50px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.showcase-content p {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 2px;
+}
+
+.tabs {
+    background: var(--dark-color);
+    padding-top: 0.5rem;
+    border-bottom: 3px solid #3d3d3d;
+}
+
+.tabs .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tabs .container > div {
+    padding: 1rem 0;
+}
+
+.tab-border {
+    border-bottom: var(--primary-color) 4px solid;
+}
+
+.tabs h3 {
+    color: #646363;
+}
+
+.container {
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    border: none;
+    text-align: center;
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    margin-right: -4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0, 0.45);
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+.btn-xl {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.4rem;
+    text-transform: uppercase;
+    margin-right: 0.2rem;
+    margin-top: 6rem;
+}
